@@ -16,7 +16,7 @@
     assert_args_equivalence/2,
     create/2,
     description/0,
-    delete/3,
+    delete/2,
     info/1,
     info/2,
     policy_changed/2,
@@ -53,8 +53,8 @@ create(none, X) ->
 description() ->
     [{name, ?EXCHANGE_TYPE}, {description, ?EXCHANGE_DESC}].
 
-delete(transaction, _, _) -> ok;
-delete(none, X, Bs) -> gen_server_call({delete, X, Bs}).
+% delete(transaction, _, _) -> ok;
+delete(none, X) -> gen_server_call({delete, X}).
 
 info(_X) -> [].
 

@@ -9,7 +9,7 @@
 
 -module(pgsql_listen_sup).
 
--behaviour(mirrored_supervisor).
+-behaviour(supervisor).
 
 -export([init/1, start_link/0]).
 
@@ -24,11 +24,11 @@
 ).
 
 start_link() ->
-    mirrored_supervisor:start_link(
+    supervisor:start_link(
         {local, ?MODULE},
         ?MODULE,
-        fun rabbit_misc:execute_mnesia_transaction/1,
-        ?MODULE,
+%         fun rabbit_misc:execute_mnesia_transaction/1,
+%         ?MODULE,
         []
     ).
 
