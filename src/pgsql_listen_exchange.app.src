@@ -5,5 +5,5 @@
     {registered, []},
     {env, []},
     {applications, [kernel, stdlib, rabbit, epgsql, amqp_client]},
-    {broker_version_requirements, ["3.8.0"]}
+    {broker_version_requirements, ["3.12.0"]}
 ]}.
