@@ -1,4 +1,4 @@
-PostgreSQL LISTEN Exchange
+PostgreSQL LISTEN Exchange (NOW WORKS WITH RabbitMQ v3.12)
 ==========================
 A RabbitMQ exchange type that translates PostgreSQL NOTIFY messages to AMQP
 messages and publishes them to bound queues. The PostgreSQL NOTIFY message channel
