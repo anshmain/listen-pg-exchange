@@ -19,7 +19,7 @@ Installation
 ------------
 1) Go to Releases.
 2) Copy link to zip file of version you need.
-3) On your server ensure you have installed `wget` and `unzip`
+3) On your server ensure you have installed ``wget`` and ``unzip``
 4) Make wget <copied_link>
 5) Move zip into rabbitmq plugins
 6) unzip <zip_name>.zip
