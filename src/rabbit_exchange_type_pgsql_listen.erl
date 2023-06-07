@@ -53,7 +53,8 @@ create(none, X) ->
 description() ->
     [{name, ?EXCHANGE_TYPE}, {description, ?EXCHANGE_DESC}].
 
-delete(_Serial, _X) -> ok.
+delete(transaction, _) -> ok;
+delete(none, X) -> gen_server_call({delete, X}).
 
 info(_X) -> [].
 
